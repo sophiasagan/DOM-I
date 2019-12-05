@@ -60,13 +60,13 @@ let nav0 = document.querySelector('nav');
 let nav1 = document.createElement('a');
 nav1.textContent = 'Newsletter';
 nav1.href = '#';
-nav1.style.color = 'bluge';
+nav1.style.color = 'green';
 nav0.prepend(nav1);
 
 let nav6 = document.createElement('a');
 nav6.textContent = 'History';
 nav6.href = '#';
-nav6.style.color = 'purple';
+nav6.style.color = 'green';
 nav0.append(nav6);
 
 
@@ -77,7 +77,16 @@ nav0.append(nav6);
   getCTA[0].getElementsByTagName('h1')[0].innerText = siteContent['cta']['h1'];
   getCTA[0].getElementsByTagName('button')[0].innerText = siteContent['cta']['button'];
   document.getElementById('cta-img').setAttribute('src', siteContent['cta']['img-src']);
-  siteContent.cta.h1.split(' ').join('<br>');
+
+  let ctaTextH1 = document.querySelector('.cta-text h1')
+  siteContent.cta.h1 = "DOM <br> Is <br> Awesome"
+  ctaTextH1.innerHTML = siteContent['cta']['h1']
+
+  // getCTA[0].getElementsByTagName('h1')[0].textContent['Dom <br> Is <br> Awesome'];
+  
+  // let wordsCTA = document.querySelector('.cta-text h1')
+  // wordsCTA.textContent = 'Dom <br> Is <br> Awesome';
+
 
 //CTA
 
@@ -126,10 +135,10 @@ nav0.append(nav6);
   // Stretch: update styles throughout the page.
 
   
-  let random_colors = ['red', 'orange', 'green', 'blue', 'purple']
+  let random_colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple']
   
   function random_color_index() {
-    return Math.floor(Math.random() * 5)
+    return Math.floor(Math.random() * 7)
   }
   
   setInterval(function() {
