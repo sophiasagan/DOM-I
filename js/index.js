@@ -148,9 +148,9 @@ nav0.append(nav6);
   
     // Stretch: add event listener to button
   
-let cta_button = document.querySelector('section.cta .cta-text button')
-cta_button.textContent = siteContent["cta"]["button"]
+// let cta_button = document.querySelector('section.cta .cta-text button')
+// cta_button.textContent = siteContent["cta"]["button"]
 
-  cta_button.addEventListener('click', function() {
-    h1.textContent = 'Thanks for the click!'
-  })
+//   cta_button.addEventListener('click', function() {
+//     h1.textContent = 'Thanks for the click!'
+//   })
